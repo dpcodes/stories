@@ -7,13 +7,13 @@
       <% else %>
         <%= follow_tag_button_for(@dashboard.tag) %>
       <% end %>
-      <small class="heading-prefix">Tagged in</small>
+      <small class="heading-prefix">relacionados a </small>
       <h3 class="heading-title"><%= @dashboard.tag.name %></h3>
 
     </div>
 
     <div class="tag-followers-list">
-      <small class="heading-prefix">People Interested in <%= @dashboard.tag.name %></small>
+      <small class="heading-prefix">Pessoas Interessadas em <%= @dashboard.tag.name %></small>
       <%= react_component('TagFollowersList', { tagId: @dashboard.tag.id }) %>
     </div>
   </div>
@@ -29,20 +29,20 @@
 <% content_for :sidebar do %>
   <aside class="col-md-4 main-sidebar">
     <% if @related_tags.any? %>
-      <h4 class="small-heading border-top">Related Tags</h4>
+      <h4 class="small-heading border-top">Assuntos Relacionados</h4>
       <%= react_component('TagList', { tags: @related_tags }) %>
     <% end %>
 
     <% if user_signed_in? %>
       <div class="flex-container border-top">
-        <h4 class="small-heading">Tags you follow</h4>
+        <h4 class="small-heading">Assuntos que você segue</h4>
         <%= react_component('AddTagButton') %>
       </div>
       <%= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
     <% end %>
 
     <% unless @dashboard.filtered? %>
-      <h4 class="small-heading border-top">Top stories</h4>
+      <h4 class="small-heading border-top">Top publicações</h4>
       <div class="sidebar-top-stories">
         <ul>
           <% @dashboard.top_stories.each_with_index do |post, index| %>

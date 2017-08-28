@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-admin">
   <div class="container-fluid col-md-10 col-md-offset-1">
     <div class="navbar-header">
-      <%= image_tag('stories-logo.svg', height: 40, alt: "Stories") %>
+      <%= image_tag('stories-logo.svg', height: 40, alt: "Dr. Patients") %>
     </div>
     <ul class="nav navbar-nav filter-links">
       <li>
@@ -14,9 +14,9 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if admin_signed_in? %>
-          <li><%= link_to "Sign out", destroy_admin_session_path, method: :delete %></li>
+          <li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
         <% end %>
       </ul>
-    </div> 
+    </div>
   </div>
 </nav>

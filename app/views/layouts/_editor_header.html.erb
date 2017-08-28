@@ -2,7 +2,7 @@
   <div class="container-fluid col-md-10 col-md-offset-1">
     <div class="navbar-header">
       <%= link_to root_path, class: "navbar-brand", id: "logo" do %>
-        <%= image_tag('stories-logo.svg', height: 40, alt: "Stories") %>
+        <%= image_tag('stories-logo.svg', height: 40, alt: "Dr. Patients") %>
       <% end %>
     </div>
 
@@ -17,21 +17,21 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="publish-button">
           <button class="button green-border-button dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Publish <i class="fa fa-chevron-down"></i>
+            Publicar <i class="fa fa-chevron-down"></i>
           </button>
           <ul class="dropdown-menu publish-dropdown nav-dropdown">
             <span class="dropdown-arrow-top"></span>
             <span class="dropdown-arrow-bottom"></span>
             <div>
-              <h4>Ready to Publish your work?</h4>
-              <p>Add tags to reach more people</p>
+              <h4>Quase lá...</h4>
+              <p>Adicione os temas abordados em seu artigo para alcançar mais leitores.</p>
               <div class="clearfix" data-behavior="tags" data-tags="<%= @post.all_tags %>">
                 <div id="js-taggle" style="position: relative;" data-behavior="autosave"></div>
               </div>
             </div>
             <hr />
             <div>
-              <button class="button green-border-button pull-right" data-behavior="publish-button">Publish</button>
+              <button class="button green-border-button pull-right" data-behavior="publish-button">Publicar</button>
             </div>
           </ul>
         </li>
@@ -40,7 +40,6 @@
         </li>
         <%= render 'layouts/avatar_dropdown' %>
       </ul>
-    </div> 
+    </div>
   </div>
 </nav>
-
